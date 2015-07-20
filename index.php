@@ -14,7 +14,7 @@
 			require "upload.php";
 			$up = new Upload($_FILES['img']);
 			if ($up->uploadImg() == true) {
-				$image = $up->getTmp().$up->getName();
+				$image = $up->getPath().$up->getName();
 				echo "<img src='$image' />";
 			} else {
 				echo "Upload fail";

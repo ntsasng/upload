@@ -33,7 +33,7 @@ class Upload {
 		$this->_size = $size;
 	}
 
-	public function $getSize () {
+	public function getSize () {
 		return $this->_size;
 	}
 
@@ -50,7 +50,7 @@ class Upload {
 	}
 
 	public function uploadImg () {
-		if ($this->_name() != "") {
+		if ($this->getName() != "") {
 			move_uploaded_file($this->getTmp(), $this->getPath().$this->getName());
 			return true;
 		} else {
